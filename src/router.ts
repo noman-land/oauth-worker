@@ -1,6 +1,6 @@
 import { Hono } from 'hono';
 import { exchangeForTokens } from './utils/exchangeForTokens';
-import { getHsAuthUrl } from './utils/constants';
+import { getHsAuthUrl } from './utils/getHsAuthUrl';
 
 import { AuthCodeProof, RefreshTokenProof } from './utils/types';
 
