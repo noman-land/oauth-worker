@@ -14,7 +14,7 @@ REDIRECT_URI=https://api.example.com/oauth/v1/apps/chat/oauth-callback
 
 ## Deploying
 
-This deploys to Cloudflare workers. You will need two repository variables in the settings of the GitHub repo.
+This deploys to Cloudflare Workers on merge to master. You will need two repository variables in the settings of the GitHub repo.
 
 ```env
 DOMAIN=example.com
