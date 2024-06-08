@@ -65,8 +65,8 @@ export const app = new Hono<{ Bindings: Bindings }>({ strict: false })
 
     return c.redirect(`${basePath}/code?refresh_token=${token.refresh_token}`);
   })
-  .get('/install', async (c) =>
-    c.redirect(getHsAuthUrl(c.env.CLIENT_ID, c.env.REDIRECT_URI))
-  )
+  .get('/install', async (c) => {
+    return c.redirect(getHsAuthUrl(c.env.CLIENT_ID, c.env.REDIRECT_URI));
+  })
   .get('/error', async (c) => c.html(`<h4>Error: ${c.req.query('msg')}</h4>`))
   .all('*', (c) => c.text('Not Founde', 404));
