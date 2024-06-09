@@ -7,7 +7,7 @@ import { Context } from 'hono';
 export const oauthCallbackPath = async (c: Context) => {
   const code = c.req.query('code');
   if (!code) {
-    throw new Error('No code in URL');
+    throw new Error('Authorization failed. No code in URL.');
   }
 
   const { refresh_token } = await exchangeForToken<RefreshToken>(
