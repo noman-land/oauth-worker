@@ -1,4 +1,4 @@
-import { RefreshTokenProof } from './types';
+import type { RefreshTokenProof } from './types';
 
 export const makeRefreshTokenProof = (env: Env, refresh_token: string): RefreshTokenProof => {
   return {

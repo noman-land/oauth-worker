@@ -1,4 +1,4 @@
-import { ComponentWithChildren } from '../utils/types';
+import type { ComponentWithChildren } from '../utils/types';
 
 export const HtmlWrapper: ComponentWithChildren = ({ children }) => {
   return (

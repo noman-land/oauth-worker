@@ -4,10 +4,10 @@ import { ErrorPath } from './components/ErrorPath';
 import { HtmlWrapper } from './components/HtmlWrapper';
 import { InstallTheApp } from './components/InstallTheApp';
 import { TokenPath } from './components/TokenPath';
+import { oauthCallbackPath } from './paths/oauthCallbackPath';
 import { basePath } from './utils/constants';
 import { getHsAuthUrl } from './utils/getHsAuthUrl';
-import { Bindings } from './utils/types';
-import { oauthCallbackPath } from './paths/oauthCallbackPath';
+import type { Bindings } from './utils/types';
 
 export const app = new Hono<{ Bindings: Bindings; }>({ strict: false })
   .basePath(basePath)

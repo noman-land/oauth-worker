@@ -1,4 +1,4 @@
-import { AuthCodeProof } from './types';
+import type { AuthCodeProof } from './types';
 
 export const makeAuthCodeProof = (env: Env, code: string): AuthCodeProof => {
   return {

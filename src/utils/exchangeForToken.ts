@@ -1,5 +1,5 @@
 import { HS_OAUTH_TOKEN_URL } from './constants';
-import {
+import type {
   AccessToken,
   AuthCodeProof,
   RefreshToken,

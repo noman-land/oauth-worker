@@ -1,8 +1,8 @@
+import { Context } from 'hono';
 import { basePath } from '../utils/constants';
-import { RefreshToken } from '../utils/types';
 import { exchangeForToken } from '../utils/exchangeForToken';
 import { makeAuthCodeProof } from '../utils/makeAuthCodeProof';
-import { Context } from 'hono';
+import type { RefreshToken } from '../utils/types';
 
 export const oauthCallbackPath = async (c: Context) => {
   const code = c.req.query('code');

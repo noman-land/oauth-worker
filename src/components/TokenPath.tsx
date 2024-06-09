@@ -2,7 +2,7 @@ import { useRequestContext } from 'hono/jsx-renderer';
 import { Success } from './Success';
 import { exchangeForToken } from '../utils/exchangeForToken';
 import { makeRefreshTokenProof } from '../utils/makeRefreshTokenProof';
-import { AccessToken } from '../utils/types';
+import type { AccessToken } from '../utils/types';
 
 export const TokenPath = async () => {
   const c = useRequestContext();
