@@ -1,3 +1,5 @@
+import { jsxRenderer } from 'hono/jsx-renderer';
+
 interface BaseProof {
   client_id: string;
   client_secret: string;
@@ -24,4 +26,20 @@ export interface Contact {
 export interface Error {
   status: 'error';
   message: string;
+}
+
+export type Bindings = {
+  CLIENT_ID: string;
+  CLIENT_SECRET: string;
+  REDIRECT_URI: string;
+};
+
+export type ComponentWithChildren = Parameters<typeof jsxRenderer>[0];
+
+export interface RefreshToken {
+  refresh_token: string;
+}
+
+export interface AccessToken {
+  access_token: string;
 }

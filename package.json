@@ -5,20 +5,16 @@
   "license": "MIT",
   "scripts": {
     "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "start": "wrangler dev",
+    "dev": "wrangler dev --port 9498",
+    "start": "npm run dev",
     "tail": "wrangler tail",
     "cf-typegen": "wrangler types"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20240603.0",
-    "@types/dotenv": "^8.2.0",
-    "@types/node": "^20.14.2",
     "typescript": "^5.4.5",
     "wrangler": "^3.60.0"
   },
   "dependencies": {
-    "dotenv": "^16.4.5",
     "hono": "^4.4.3"
   }
 }
